@@ -1,7 +1,7 @@
 <?php
 
 
-class Users
+class Users extends Controller
 {
 
     /**
@@ -9,17 +9,20 @@ class Users
      */
     public function __construct()
     {
+        parent::__construct();
+        $this->loadModel('user');
     }
 
     public function index()
     {
+        $users = $this->model->all();
         require APP . 'views/users/index.php';
     }
 
     public function show($id, $p2 = null)
     {
-        print_r($id);
-        echo '<br>';
-        echo $p2;
+        $user = $this->model->find($id);
+
+        echo $user->name;
     }
 }

@@ -12,7 +12,7 @@ abstract class Controller
     {
     }
 
-    public function loadMode($model)
+    public function loadModel($model)
     {
         require_once APP . 'models/' . $model . '.php';
         $this->model = new $model();
