@@ -9,11 +9,14 @@
 </head>
 <body>
 
+this is home
+<br>
 
 <?php
 print_r($_SESSION);
 ?>
 
+<a href="<?php echo URL?>users/logout"> Logout </a>
 
 </body>
 </html>

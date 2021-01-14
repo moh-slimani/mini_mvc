@@ -12,8 +12,9 @@
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
-        <input type="submit" name="submit" value="submit"  class="w-100 btn btn-lg btn-primary" type="submit">Sign in</input>
+        <input type="submit" name="submit" value="Sign in"  class="w-100 btn btn-lg btn-primary">
     </form>
+    <a href="<?php echo URL ?>users/register">create an account</a>
 </main>
 
 

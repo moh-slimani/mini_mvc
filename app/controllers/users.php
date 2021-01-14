@@ -37,6 +37,17 @@ class Users extends Controller
         require APP . 'views/_template/auth_footer.php';
     }
 
+    public function register()
+    {
+        if (isset($this->post->submit)) {
+            $this->model->register($this->post);
+        }
+
+        require APP . 'views/_template/auth_header.php';
+        require APP . 'views/users/register.php';
+        require APP . 'views/_template/auth_footer.php';
+    }
+
 
     public function logout()
     {
