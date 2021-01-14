@@ -25,4 +25,22 @@ class Users extends Controller
 
         echo $user->name;
     }
+
+    public function login()
+    {
+        if (isset($this->post->submit)) {
+            $this->model->login($this->post);
+        }
+
+        require APP . 'views/_template/auth_header.php';
+        require APP . 'views/users/login.php';
+        require APP . 'views/_template/auth_footer.php';
+    }
+
+
+    public function logout()
+    {
+        $this->model->logout();
+
+    }
 }
